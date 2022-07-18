@@ -1,0 +1,31 @@
+ALGORITHM algorithm_name
+VAR 
+ phr: STRING;
+ chr: CHAR;
+ nbreC: INTEGER;
+ nbrMot=0: INTEGER;
+ nbrVoy=0: INTEGER;
+    set_declarations
+BEGIN
+write(phr)
+read(phr)
+WHILE (phr[i]!=".") DO
+   nbreC++;
+    i++;
+END_WHILE
+    write("le nombre  de caractères est:" nbreC)
+END
+
+FOR i FROM 0 TO nbreC-1 STEP step DO
+    IF (phr[i]=" " OR phr[i]= ".") THEN
+        mot++;
+    END_IF
+END_FOR
+ write("le nombre de mot est:" nbrMot)
+
+ FOR i FROM 0 TO nbreC-1 STEP step  DO
+    IF (phr[i]="a" OR phr[i]="A" OR phr[i]="e" phr[i]="E" OR phr[i]="i"  OR phr[i]="I" OR phr[i]="u"  OR phr[i]="U" OR phr[i]="o"  phr[i]="O" OR phr[i]="y" OR phr[i]="y") THEN
+     voy++
+    END_IF
+ END_FOR
+ write("le nombre de voyelle est:" nbrVoy)
